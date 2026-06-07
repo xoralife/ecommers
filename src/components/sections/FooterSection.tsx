@@ -134,11 +134,11 @@ export default function FooterSection() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/5 pt-6 text-center">
+        {/* <div className="mt-8 border-t border-white/5 pt-6 text-center">
           <p className="text-xs text-muted-foreground">
             &copy; 2026 ElectroVerse. All rights reserved.
           </p>
-        </div>
+        </div> */}
       </div>
     </motion.footer>
   )
