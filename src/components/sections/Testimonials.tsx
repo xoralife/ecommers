@@ -64,7 +64,7 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
           <motion.div
             className="flex gap-6"
             animate={isInView ? { x: ["0%", "-50%"] } : { x: "0%" }}

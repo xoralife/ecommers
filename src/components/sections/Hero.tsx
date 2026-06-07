@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { ArrowRight, CircuitBoard, Zap, Cpu } from "lucide-react"
+import { ArrowRight, CircuitBoard, Zap, Cpu, CheckCircle } from "lucide-react"
 
 const circuitPaths = [
   "M 50 100 L 150 100 L 200 50 L 350 50",
@@ -200,6 +200,39 @@ function FloatingElements() {
   )
 }
 
+function TeacherCard() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+      className="absolute right-[5%] top-1/4 z-20 md:right-[8%] md:top-1/3"
+    >
+      <div className="glass rounded-2xl border border-white/[0.08] p-4 shadow-teal-glow">
+        <div className="flex items-center gap-3">
+          <div className="size-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[#2BA8A2]/40">
+            <img
+              src="./p.jpg"
+              alt="Instructor"
+              width={56}
+              height={56}
+              className="size-full object-cover"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-white">Abid Hussain</p>
+            <p className="text-xs text-[#8888a0]">Electronics Instructor</p>
+          </div>
+        </div>
+        <div className="mt-3 flex items-center gap-1.5 text-xs text-[#2BA8A2]">
+          <CheckCircle className="size-3.5" />
+          <span>2,400+ students mentored</span>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
@@ -210,7 +243,8 @@ export default function Hero() {
       className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
     >
       <CircuitBoardSVG />
-      <FloatingElements />
+        <FloatingElements />
+        <TeacherCard />
 
       <div className="absolute inset-0 bg-gradient-to-b from-dark-elite/0 via-dark-elite/50 to-dark-elite" />
 
