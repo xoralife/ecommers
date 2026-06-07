@@ -107,7 +107,7 @@ export default function CareerSimulator() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-[#0a0a0f] px-4 py-24 md:px-8 lg:px-16"
+      className="relative overflow-hidden bg-[#0a0a0f] px-4 py-16 md:py-24 md:px-8 lg:px-16"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(43,168,162,0.06),transparent)]" />
 
@@ -116,7 +116,7 @@ export default function CareerSimulator() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-10 md:mb-16 text-center"
         >
           <span className="mb-3 inline-block rounded-full border border-[#2BA8A2]/20 bg-[#2BA8A2]/5 px-4 py-1 text-xs font-semibold tracking-widest uppercase text-[#2BA8A2]">
             Career Paths

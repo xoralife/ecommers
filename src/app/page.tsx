@@ -9,6 +9,7 @@ import Competitive from "@/components/sections/Competitive";
 import Marketplace from "@/components/sections/Marketplace";
 import FutureTech from "@/components/sections/FutureTech";
 import Testimonials from "@/components/sections/Testimonials";
+import ContactSection from "@/components/sections/ContactSection";
 import Pricing from "@/components/sections/Pricing";
 import FooterSection from "@/components/sections/FooterSection";
 
@@ -27,6 +28,7 @@ export default function Home() {
         <Marketplace />
         <FutureTech />
         <Testimonials />
+        <ContactSection />
         <Pricing />
       </main>
       <FooterSection />

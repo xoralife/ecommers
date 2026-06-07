@@ -93,7 +93,7 @@ export default function Competitive() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[#0a0a0f] px-4 py-24 md:px-8 lg:px-16"
+      className="relative overflow-hidden bg-[#0a0a0f] px-4 py-16 md:py-24 md:px-8 lg:px-16"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_50%,rgba(93,173,226,0.04),transparent)]" />
 
@@ -102,7 +102,7 @@ export default function Competitive() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-14 text-center"
+          className="mb-10 md:mb-14 text-center"
         >
           <span className="mb-3 inline-block rounded-full border border-[#5DADE2]/20 bg-[#5DADE2]/5 px-4 py-1 text-xs font-semibold tracking-widest uppercase text-[#5DADE2]">
             Gamification

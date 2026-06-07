@@ -206,16 +206,16 @@ function TeacherCard() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 1.5, ease: "easeOut" }}
-      className="relative mt-10 flex justify-center z-20 lg:absolute lg:right-[6%] lg:top-1/2 lg:-translate-y-1/2 lg:mt-0"
+      className="flex justify-center z-20 lg:absolute lg:right-[6%] lg:top-1/2 lg:-translate-y-1/2"
     >
       <div className="relative w-full max-w-sm rounded-2xl border border-white/[0.06] bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-5 shadow-[0_0_40px_-8px_rgba(43,168,162,0.2)] backdrop-blur-xl">
         <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-[#2BA8A2]/30 via-transparent to-[#FFD23F]/20 opacity-50 pointer-events-none" />
         <div className="relative flex items-center gap-4">
-          <div className="size-16 shrink-0 overflow-hidden rounded-2xl ring-2 ring-[#2BA8A2]/30 shadow-lg shadow-[#2BA8A2]/10">
+          <div className="size-20 shrink-0 overflow-hidden rounded-2xl ring-2 ring-[#2BA8A2]/30 shadow-lg shadow-[#2BA8A2]/10">
             <img
               src="/p.jpg"
               alt="Instructor"
-              className="size-full object-cover"
+              className="size-full object-cover scale-125"
             />
           </div>
           <div className="min-w-0">
@@ -239,21 +239,20 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-[90vh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[80vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden"
     >
       <CircuitBoardSVG />
         <FloatingElements />
-        <TeacherCard />
 
       <div className="absolute inset-0 bg-gradient-to-b from-dark-elite/0 via-dark-elite/50 to-dark-elite" />
 
       <motion.div
-        className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32"
+        className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32"
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <div className="glass rounded-2xl p-8 sm:p-12 lg:p-16 text-center">
+        <div className="glass rounded-2xl p-6 sm:p-12 lg:p-16 text-center">
           <motion.div variants={itemVariants} className="mb-4">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium tracking-wide">
               <Zap size={14} className="fill-primary" />
@@ -263,7 +262,7 @@ export default function Hero() {
 
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6"
           >
             <span className="text-gradient">
               Master Electronics
@@ -276,7 +275,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="max-w-2xl mx-auto text-lg sm:text-xl text-muted-foreground leading-relaxed mb-10"
+            className="max-w-2xl mx-auto text-base sm:text-xl text-muted-foreground leading-relaxed mb-10"
           >
             Dive into circuits, PCB design, embedded systems, Arduino, ESP32, and
             real-world electronics projects with immersive virtual labs and
@@ -318,6 +317,8 @@ export default function Hero() {
             </motion.a>
           </motion.div>
         </div>
+
+        <TeacherCard />
       </motion.div>
     </section>
   )

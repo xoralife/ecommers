@@ -67,14 +67,14 @@ export default function AITutor() {
   const featuresInView = useInView(featuresRef, { once: true, margin: "-60px" })
 
   return (
-    <section id="ai-tutor" className="relative overflow-hidden px-4 py-24 sm:px-6 lg:px-8">
+    <section id="ai-tutor" className="relative overflow-hidden px-4 py-16 md:py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div ref={headerRef}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="mb-16 text-center"
+            className="mb-10 md:mb-16 text-center"
           >
             <div className="mb-6 inline-flex items-center justify-center">
               <motion.div

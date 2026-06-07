@@ -149,14 +149,14 @@ export default function Projects() {
     <section
       ref={ref}
       id="projects"
-      className="relative overflow-hidden px-4 py-24 sm:px-6 lg:px-8"
+      className="relative overflow-hidden px-4 py-16 md:py-24 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="mb-14 text-center"
+          className="mb-10 md:mb-14 text-center"
         >
           <span className="mb-3 inline-block rounded-full border border-neon-blue/20 bg-neon-blue/5 px-4 py-1 text-xs font-medium tracking-widest uppercase text-neon-blue">
             Hands-On Learning

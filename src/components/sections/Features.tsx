@@ -173,7 +173,7 @@ export default function Features() {
   const isInView = useInView(ref, { once: true, margin: "-120px" })
 
   return (
-    <section ref={ref} id="features" className="relative py-24 sm:py-32 overflow-hidden">
+    <section ref={ref} id="features" className="relative py-16 md:py-24 sm:py-32 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-50" />
 
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,7 +181,7 @@ export default function Features() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] as const }}
-          className="text-center mb-16 sm:mb-20"
+          className="text-center mb-10 md:mb-16 sm:mb-20"
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-accent/5 text-accent text-sm font-medium tracking-wide mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
