@@ -203,30 +203,29 @@ function FloatingElements() {
 function TeacherCard() {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 40 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
-      className="absolute right-[5%] top-1/4 z-20 md:right-[8%] md:top-1/3"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 1.5, ease: "easeOut" }}
+      className="relative mt-10 flex justify-center z-20 lg:absolute lg:right-[6%] lg:top-1/2 lg:-translate-y-1/2 lg:mt-0"
     >
-      <div className="glass rounded-2xl border border-white/[0.08] p-4 shadow-teal-glow">
-        <div className="flex items-center gap-3">
-          <div className="size-14 shrink-0 overflow-hidden rounded-full ring-2 ring-[#2BA8A2]/40">
+      <div className="relative w-full max-w-sm rounded-2xl border border-white/[0.06] bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-5 shadow-[0_0_40px_-8px_rgba(43,168,162,0.2)] backdrop-blur-xl">
+        <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-br from-[#2BA8A2]/30 via-transparent to-[#FFD23F]/20 opacity-50 pointer-events-none" />
+        <div className="relative flex items-center gap-4">
+          <div className="size-16 shrink-0 overflow-hidden rounded-2xl ring-2 ring-[#2BA8A2]/30 shadow-lg shadow-[#2BA8A2]/10">
             <img
-              src="./p.jpg"
+              src="/p.jpg"
               alt="Instructor"
-              width={56}
-              height={56}
               className="size-full object-cover"
             />
           </div>
-          <div>
-            <p className="text-sm font-semibold text-white">Abid Hussain</p>
-            <p className="text-xs text-[#8888a0]">Electronics Instructor</p>
+          <div className="min-w-0">
+            <p className="text-base font-bold text-white">Abid Hussain</p>
+            <p className="text-sm text-[#8888a0]">Electronics Instructor</p>
+            <div className="mt-1.5 flex items-center gap-1.5 text-xs text-[#2BA8A2]">
+              <CheckCircle className="size-3.5" />
+              <span>2,400+ students</span>
+            </div>
           </div>
-        </div>
-        <div className="mt-3 flex items-center gap-1.5 text-xs text-[#2BA8A2]">
-          <CheckCircle className="size-3.5" />
-          <span>2,400+ students mentored</span>
         </div>
       </div>
     </motion.div>
