@@ -64,26 +64,19 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <motion.div
-            drag="x"
-            dragConstraints={ref}
-            dragElastic={0.05}
-            dragTransition={{ bounceStiffness: 300, bounceDamping: 30 }}
-            className="flex cursor-grab justify-center gap-6 active:cursor-grabbing"
-            style={{ WebkitOverflowScrolling: "touch" }}
+            className="flex gap-6"
+            animate={isInView ? { x: ["0%", "-50%"] } : { x: "0%" }}
+            transition={{
+              duration: 24,
+              ease: "linear",
+              repeat: Infinity,
+            }}
           >
             {[...testimonials, ...testimonials].map((item, index) => (
               <motion.div
                 key={`${item.name}-${index}`}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{
-                  duration: 0.5,
-                  delay: (index % testimonials.length) * 0.1,
-                  ease: "easeOut",
-                }}
-                whileHover={{ y: -4 }}
                 className={cn(
                   "min-w-[340px] max-w-[340px] shrink-0 rounded-2xl",
                   "border border-white/10 bg-white/5 p-6",
